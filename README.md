@@ -12,7 +12,7 @@ The project is a exercise of a book called C how to Program by Paul Deitel and H
 
 Perhaps the most famous of all coding schemes is Morse code, developed by Samuel Morse in 1832 for use in conjunction with the telegraph system telegraph system. Morse code assigns a series of dots and dashes to each letter of the alphabet, each digit, and some special characters (such as a period, comma, colon and semicolon). and semicolon). In sound-oriented systems, the represents a short sound and the dash represents a long long sound. Other representations of dots and dashes are used with light-oriented systems and signaling flag signaling systems. Separation between words is indicated by a space -simply the absence of a dot or a dash. In a sound-oriented system, a space is indicated by a short period of time during which no sound is transmitted. The international version of Morse code appears in Figure 8.39
 
-![](C:\Users\Thy20\OneDrive\Área de Trabalho\Captura de tela 2021-12-07 213219.png)
+![](TabelaCodigoMorse.png)
 
 Write a program that reads a sentence in Portuguese
 and encode it into Morse code. Also write a program that reads a phrase in Morse code and converts it to the to the Portuguese equivalent. Use a space between each letter of the Morse code and three spaces between each word in Morse code
