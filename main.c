@@ -11,6 +11,7 @@ void morseToPtbr(char text[MAX], char* const alpha[][2]);
 void ptbrToMorse(char text[MAX], char* const alpha[][2]);
 
 int main(void){
+    
     char *morseAlphabet[ALPHABET_SIZE][2] = {
         {"a",".-"},
         {"b","-..."},
@@ -56,12 +57,20 @@ int main(void){
     int i = 0;
     printf("%s\n%s\n","Tradutor de Codigo Morse:\nEste programa traduz do Morse para o PT-BR e vice-versa.","Logo Abaixo esta a tabela do alfabeto com os seus respectivos valores em Codigo Morse");
     exibirTabela(morseAlphabet);
-    //printf("Digite a opcao que desaeja:\n0 - PT-BR para Morse\n1- Morse para PT-BR\nOpcao: ");
     
+    // entrada de dados 
     while((chr=getchar())!='\n'){
         text[i++] = chr;
     }
+    //adicionar '\0' para indicar o fim do array de char
     text[i] = '\0';
+
+
+    // para traduzir de pt-br para o codigo morse
+    ptbrToMorse(text,morseAlphabet);
+
+    //para traduzir do codigo morse para pt-br
+    //morseToPtbr(text,morseAlphabet);
     return 0;
 }
 
@@ -72,7 +81,7 @@ void ptbrToMorse(char text[MAX],char * const alpha[][2]){
    
         int j = 0, i = 0;
         char *morseText[MAX];
-        while(text[i]!='\0'){ //texto = 5
+        while(text[i]!='\0'){ 
             j = 0;
             while(j<ALPHABET_SIZE){
                 if(strchr(alpha[j][0],tolower(text[i]))){
@@ -83,6 +92,7 @@ void ptbrToMorse(char text[MAX],char * const alpha[][2]){
        }
        i++;
     }
+            //exibir a palavra traduzida
             int a = 0;
             while(morseText[a]!='\0'){
             printf("%s",morseText[a]);
@@ -114,6 +124,7 @@ void morseToPtbr(char text[MAX], char* const alpha[][2]){
     }
     ptbrText[i] = '\0';
         
+            //exibir a palavra traduzida
             int a = 0;
             while(ptbrText[a]!='\0'){
             printf("%s",ptbrText[a]);
